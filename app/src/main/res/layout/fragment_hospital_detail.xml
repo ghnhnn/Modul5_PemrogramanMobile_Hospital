@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.example.hospital.ui.HospitalViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:padding="8dp"
+            android:gravity="center"
+            android:text="Region : "
+            android:textStyle="bold"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/name1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:gravity="center"
+            app:layout_constraintStart_toStartOf="@id/name"
+            app:layout_constraintTop_toBottomOf="@id/name"
+            tools:text="Alabama"
+            android:text="@{viewModel.hospital.region}"/>
+
+        <TextView
+            android:id="@+id/address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="Region Code : "
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            app:layout_constraintStart_toStartOf="@id/name1"
+            app:layout_constraintTop_toBottomOf="@id/name1"/>
+
+        <TextView
+            android:id="@+id/address1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:gravity="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            app:layout_constraintStart_toStartOf="@id/address"
+            app:layout_constraintTop_toBottomOf="@id/address"
+            tools:text="AL"
+            android:text="@{viewModel.hospital.regionCode}"/>
+
+        <TextView
+            android:id="@+id/region"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:gravity="center"
+            android:text="Period : "
+            android:textStyle="bold"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            app:layout_constraintStart_toStartOf="@id/address1"
+            app:layout_constraintTop_toBottomOf="@id/address1"/>
+
+        <TextView
+            android:id="@+id/region1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:gravity="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            app:layout_constraintStart_toStartOf="@id/region"
+            app:layout_constraintTop_toBottomOf="@id/region"
+            tools:text="KOTA BANDA ACEH, ACEH"
+            android:text="@{viewModel.hospital.period}"/>
+
+<!--        <TextView-->
+<!--            android:id="@+id/phone"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:padding="8dp"-->
+<!--            android:gravity="center"-->
+<!--            android:text="Phone : "-->
+<!--            android:textStyle="bold"-->
+<!--            android:textAppearance="@style/TextAppearance.AppCompat.Body2"-->
+<!--            app:layout_constraintStart_toStartOf="@id/region1"-->
+<!--            app:layout_constraintTop_toBottomOf="@id/region1"/>-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/phone1"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:padding="8dp"-->
+<!--            android:gravity="center"-->
+<!--            android:textAppearance="@style/TextAppearance.AppCompat.Body1"-->
+<!--            app:layout_constraintStart_toStartOf="@id/phone"-->
+<!--            app:layout_constraintTop_toBottomOf="@id/phone"-->
+<!--            tools:text="(0651) 34565"-->
+<!--            android:text="@{viewModel.hospital.phone}"/>-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/province"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="32dp"-->
+<!--            android:gravity="center"-->
+<!--            android:padding="8dp"-->
+<!--            android:text="Province : "-->
+<!--            android:textAppearance="@style/TextAppearance.AppCompat.Body2"-->
+<!--            android:textStyle="bold"-->
+<!--            app:layout_constraintStart_toStartOf="@id/phone1"-->
+<!--            app:layout_constraintTop_toBottomOf="@id/phone"-->
+<!--            tools:ignore="DuplicateIds" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/province1"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:padding="8dp"-->
+<!--            android:gravity="center"-->
+<!--            android:textAppearance="@style/TextAppearance.AppCompat.Body1"-->
+<!--            app:layout_constraintStart_toStartOf="@id/province"-->
+<!--            app:layout_constraintTop_toBottomOf="@id/province"-->
+<!--            tools:text="Aceh"-->
+<!--            android:text="@{viewModel.hospital.province}"/>-->
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
